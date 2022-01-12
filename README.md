@@ -12,3 +12,9 @@ message Error {
   map<string, string> metadata = 5;
 };
 ```
+## Installation
+```
+go get github.com/to2false/reason-errors@v0.1.0
+```
+
+Relative Tool: https://github.com/to2false/protoc-gen-go-reason-errors
