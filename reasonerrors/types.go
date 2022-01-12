@@ -1,5 +1,5 @@
 // nolint:gomnd
-package errors
+package reasonerrors
 
 // BadRequest new BadRequest error that is mapped to a 400 response.
 func BadRequest(reasonNo int, reason, message string) *Error {

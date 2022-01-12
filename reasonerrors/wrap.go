@@ -1,4 +1,4 @@
-package errors
+package reasonerrors
 
 import (
 	stderrors "errors"
