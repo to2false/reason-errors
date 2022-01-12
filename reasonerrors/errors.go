@@ -30,7 +30,7 @@ func (e *Error) Error() string {
 
 // GRPCStatus returns the Status represented by se.
 func (e *Error) GRPCStatus() *status.Status {
-	if e.Metadata != nil {
+	if e.Metadata == nil {
 		e.Metadata = make(map[string]string)
 	}
 	e.Metadata["reason_no"] = strconv.Itoa(int(e.ReasonNo))
