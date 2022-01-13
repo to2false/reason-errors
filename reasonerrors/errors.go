@@ -60,6 +60,10 @@ func (e *Error) WithMetadata(md map[string]string) *Error {
 
 // New returns an error object for the code, message.
 func New(code, reasonNo int, reason, message string) *Error {
+	if message == "" {
+		message = reason
+	}
+
 	return &Error{
 		Code:     int32(code),
 		Message:  message,
