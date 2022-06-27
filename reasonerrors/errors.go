@@ -100,6 +100,16 @@ func Reason(err error) string {
 	return FromError(err).Reason
 }
 
+// ReasonNo returns the reason no for a particular error.
+// It supports wrapped errors.
+func ReasonNo(err error) int {
+	if err == nil {
+		return UnknownReasonNo
+	}
+
+	return int(FromError(err).ReasonNo)
+}
+
 // FromError try to convert an error to *Error.
 // It supports wrapped errors.
 func FromError(err error) *Error {

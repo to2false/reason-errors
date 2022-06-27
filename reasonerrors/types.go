@@ -99,3 +99,7 @@ func ClientClosed(reasonNo int, reason, message string) *Error {
 func IsClientClosed(err error) bool {
 	return Code(err) == 499
 }
+
+func IsUnknown(err error) bool {
+	return ReasonNo(err) == UnknownReasonNo
+}
